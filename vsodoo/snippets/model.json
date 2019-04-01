@@ -1,0 +1,29 @@
+{
+    "create model": {
+        "prefix": "omd",
+        "body": [
+            "from odoo import api, fields, models, _",
+            "\n",
+            "\n",
+            "class $1(models.Model):",
+            "\t_name = \"$2\"",
+            "\t_description = \"$3\"",
+            "\t_inherit=\"$4\""
+        ],
+        "description": "create a new odoo model."
+    },
+    "boolean type": {
+        "prefix": "fb",
+        "body": [
+            "$1 = fields.Boolean('$2',help='$3')"
+        ],
+        "description": "create Boolean type field."
+    },
+    "many2one type": {
+        "prefix": "fm2o",
+        "body": [
+            "$1 = fields.Many2one('$2', string='$3', ondelete='restrict', required=True,help='$4')"
+        ],
+        "description": "create Many2one type field."
+    }
+}

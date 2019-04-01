@@ -1,0 +1,37 @@
+{
+    "manifest":{
+        "prefix":"omi",
+        "body":[
+            "# -*- coding: utf-8 -*-",
+            "# Part of Odoo. See LICENSE file for full copyright and licensing details.",
+            "{",
+            "\t'name' : '$1',",
+            "\t'version' : '1.0',",
+            "\t'summary': '$2',",
+            "\t'sequence': $3,",
+            "'description': \"\"\"",
+            "$4",
+            "====================",
+            "$5",
+            "\"\"\"",
+            "\t'category': '$6',",
+            "\t'website': '$7',",
+            "\t'images' : [$8],",
+            "\t'depends' : [$9],",
+            "\t'data': [",
+            "\t    ",
+            "\t],",
+            "\t'demo': [",
+            "\t    '$10',",
+            "\t],",
+            "\t'qweb': [",
+            "\t    \"$11\",",
+            "\t],",
+            "\t'installable': True,",
+            "\t'application': True,",
+            "\t'auto_install': False,",
+            "}"
+        ],
+        "description":"create odoo manifest file."
+    }
+}
