@@ -25,13 +25,17 @@
 		],
 		"snippets": [
 			{
-                "language": "python",
-                "path": "./snippets/mainfest.json"
-            },
-            {
-                "language": "python",
-                "path": "./snippets/model.json"
-            }
+				"language": "python",
+				"path": "./snippets/mainfest.json"
+			},
+			{
+				"language": "python",
+				"path": "./snippets/model.json"
+			},
+			{
+				"language": "python",
+				"path": "./snippets/function.json"
+			}
 		]
 	},
 	"scripts": {

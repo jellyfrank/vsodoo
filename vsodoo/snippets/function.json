@@ -1,0 +1,16 @@
+{
+    "compute attr": {
+        "prefix": "com",
+        "body": [
+            "compuate='_$1'"
+        ],
+        "description": "field compute attribute."
+    },
+    "read group": {
+        "prefix": "read_group",
+        "body": [
+            "read_group($1)"
+        ],
+        "description": "read group method."
+    }
+}

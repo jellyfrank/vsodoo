@@ -22,8 +22,22 @@
     "many2one type": {
         "prefix": "fm2o",
         "body": [
-            "$1 = fields.Many2one('$2', string='$3', ondelete='restrict', required=True,help='$4')"
+            "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False},help='$6')"
         ],
         "description": "create Many2one type field."
+    },
+    "integer type": {
+        "prefix": "fint",
+        "body": [
+            "$1 = fields.Integer('$2',string='$3', readonly=${4|True,False|})"
+        ],
+        "description": "create Integer type field."
+    },
+    "selection type": {
+        "prefix": "fselect",
+        "body": [
+            "$1 = fields.Selection(selection='$2',string='$3',default='$4',help='$5')"
+        ],
+        "description": "create Selection type field."
     }
 }
