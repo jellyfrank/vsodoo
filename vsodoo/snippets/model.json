@@ -1,10 +1,10 @@
 {
     "create model": {
-        "prefix": "omd",
+        "prefix": "odmd",
         "body": [
             "from odoo import api, fields, models, _",
-            "\n",
-            "\n",
+            "\r",
+            "\r",
             "class $1(models.Model):",
             "\t_name = \"$2\"",
             "\t_description = \"$3\"",
@@ -12,29 +12,36 @@
         ],
         "description": "create a new odoo model."
     },
-    "boolean type": {
-        "prefix": "fb",
+    "odoo model char field.": {
+        "prefix":"ofc",
+        "body":[
+            "$1 = fields.Char('$2',help='$3')"
+        ],
+        "descritption":"create Char type field."
+    },
+    " odoo model boolean type": {
+        "prefix": "ofb",
         "body": [
             "$1 = fields.Boolean('$2',help='$3')"
         ],
         "description": "create Boolean type field."
     },
-    "many2one type": {
-        "prefix": "fm2o",
+    "odoo model many2one type": {
+        "prefix": "ofm2o",
         "body": [
             "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False},help='$6')"
         ],
         "description": "create Many2one type field."
     },
-    "integer type": {
-        "prefix": "fint",
+    "odoo model integer type": {
+        "prefix": "ofint",
         "body": [
             "$1 = fields.Integer('$2',string='$3', readonly=${4|True,False|})"
         ],
         "description": "create Integer type field."
     },
-    "selection type": {
-        "prefix": "fselect",
+    "odoo model selection type": {
+        "prefix": "ofselect",
         "body": [
             "$1 = fields.Selection(selection='$2',string='$3',default='$4',help='$5')"
         ],
