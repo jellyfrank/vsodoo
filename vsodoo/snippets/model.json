@@ -12,39 +12,123 @@
         ],
         "description": "create a new odoo model."
     },
+    "create model without import": {
+        "prefix": "odmds",
+        "body": [
+            "class $1(models.Model):",
+            "\t_name = \"$2\"",
+            "\t_description = \"$3\"",
+            "\t_inherit=\"$4\""
+        ],
+        "description": "create a new odoo model without any imports."
+    },
     "odoo model char field.": {
-        "prefix":"ofc",
+        "prefix":"odfc",
         "body":[
             "$1 = fields.Char('$2',help='$3')"
         ],
         "descritption":"create Char type field."
     },
     " odoo model boolean type": {
-        "prefix": "ofb",
+        "prefix": "odfb",
         "body": [
             "$1 = fields.Boolean('$2',help='$3')"
         ],
         "description": "create Boolean type field."
     },
     "odoo model many2one type": {
-        "prefix": "ofm2o",
+        "prefix": "odfm2o",
         "body": [
-            "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False},help='$6')"
+            "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False|},help='$6')"
         ],
         "description": "create Many2one type field."
     },
     "odoo model integer type": {
-        "prefix": "ofint",
+        "prefix": "odfint",
         "body": [
             "$1 = fields.Integer('$2',string='$3', readonly=${4|True,False|})"
         ],
         "description": "create Integer type field."
     },
     "odoo model selection type": {
-        "prefix": "ofselect",
+        "prefix": "odfselect",
         "body": [
             "$1 = fields.Selection(selection='$2',string='$3',default='$4',help='$5')"
         ],
         "description": "create Selection type field."
+    },
+    "import odoo logger": {
+        "prefix": "odlogger",
+        "body":[
+            "import logging",
+            "$1",
+            "_logger = logging.getLogger(__name__)"
+        ],
+        "description": "import logger using odoo"
+    },
+    "odoo logger info": {
+        "prefix": "odinfo",
+        "body":[
+            "_logger.info($1)"
+        ],
+        "description": "logger info message."
+    },
+    "odoo logger debug": {
+        "prefix": "oddebug",
+        "body":[
+            "_logger.debug($1)"
+        ],
+        "description": "logger debug message"
+    },
+    "odoo logger warn": {
+        "prefix": "odwarn",
+        "body":[
+            "_logger.warning($2)"
+        ],
+        "description": "logger warning message"
+    },
+    "odoo logger error":{
+        "prefix":"oderror",
+        "body":[
+            "_logger.error($1)"
+        ],
+        "description": "logger error message."
+    },
+    "odoo model create": {
+        "prefix": "odcreate",
+        "body":[
+            "@api.model",
+            "def create(self,vals):",
+            "\t$1"
+        ],
+        "description": "model create method."
+    },
+    "odoo onchange method": {
+        "prefix": "odonchange",
+        "body":[
+            "@api.onchange('$1')",
+            "def _onchange_$1(self):",
+            "\t\"\"\"$2\"\"\"",
+            "\t$3"
+        ],
+        "description": "create onchange method with specific field."
+    },
+    "odoo write method": {
+        "prefix": "odwrite",
+        "body":[
+            "@api.multi",
+            "def write(self,vals):",
+            "\t$1"
+        ],
+        "description": "write method with values."
+    },
+    "override name_get method": {
+        "prefix": "odnameget",
+        "body":[
+            "@api.multi",
+            "def name_get(self):",
+            "\t$1"
+        ],
+        "description": "override name_get method."
     }
 }
