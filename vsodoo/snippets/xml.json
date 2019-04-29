@@ -177,7 +177,7 @@
         "description": "create group node with string attritbute in odoo xml file."
     },
     "create odoo tree list": {
-        "prefix": "odtree",
+        "prefix": "odxtree",
         "body":[
             "<record id=\"$1\" model=\"ir.ui.view\">",
             "\t<field name=\"name\">$2</field>",
