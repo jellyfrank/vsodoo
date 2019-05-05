@@ -44,6 +44,11 @@ Below is a list of all available snippets.
 | `odonchange`| Add new field Text         |
 | `odwrite`  | Override write message      |
 | `odnameget`| Override name get method    |
+| `od_namesearch`| Override private name search method    |
+| `odepends` | Add depends decorator       |
+| `odnamesearch`| Override name search method        |
+| `odunlink` | Override unlink method      |
+
 
 ## Xml Snippets
 

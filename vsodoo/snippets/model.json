@@ -23,11 +23,11 @@
         "description": "create a new odoo model without any imports."
     },
     "odoo model char field.": {
-        "prefix":"odfc",
-        "body":[
+        "prefix": "odfc",
+        "body": [
             "$1 = fields.Char('$2',help='$3')"
         ],
-        "descritption":"create Char type field."
+        "descritption": "create Char type field."
     },
     " odoo model boolean type": {
         "prefix": "odfb",
@@ -59,7 +59,7 @@
     },
     "import odoo logger": {
         "prefix": "odlogger",
-        "body":[
+        "body": [
             "import logging",
             "$1",
             "_logger = logging.getLogger(__name__)"
@@ -68,35 +68,35 @@
     },
     "odoo logger info": {
         "prefix": "odinfo",
-        "body":[
+        "body": [
             "_logger.info($1)"
         ],
         "description": "logger info message."
     },
     "odoo logger debug": {
         "prefix": "oddebug",
-        "body":[
+        "body": [
             "_logger.debug($1)"
         ],
         "description": "logger debug message"
     },
     "odoo logger warn": {
         "prefix": "odwarn",
-        "body":[
+        "body": [
             "_logger.warning($2)"
         ],
         "description": "logger warning message"
     },
-    "odoo logger error":{
-        "prefix":"oderror",
-        "body":[
+    "odoo logger error": {
+        "prefix": "oderror",
+        "body": [
             "_logger.error($1)"
         ],
         "description": "logger error message."
     },
     "odoo model create": {
         "prefix": "odcreate",
-        "body":[
+        "body": [
             "@api.model",
             "def create(self,vals):",
             "\t$1"
@@ -105,7 +105,7 @@
     },
     "odoo onchange method": {
         "prefix": "odonchange",
-        "body":[
+        "body": [
             "@api.onchange('$1')",
             "def _onchange_$1(self):",
             "\t\"\"\"$2\"\"\"",
@@ -115,7 +115,7 @@
     },
     "odoo write method": {
         "prefix": "odwrite",
-        "body":[
+        "body": [
             "@api.multi",
             "def write(self,vals):",
             "\t$1"
@@ -124,11 +124,46 @@
     },
     "override name_get method": {
         "prefix": "odnameget",
-        "body":[
+        "body": [
             "@api.multi",
             "def name_get(self):",
             "\t$1"
         ],
         "description": "override name_get method."
+    },
+    "odoo depends decorator": {
+        "prefix": "odepends",
+        "body": [
+            "@api.depends('$1')",
+            "def $2"
+        ],
+        "description": "create depends decorator."
+    },
+    "override private _name_search method": {
+        "prefix": "od_namesearch",
+        "body": [
+            "@api.model",
+            "def _name_search(self, name, args=${1:None}, operator='${2|ilike,=,!=,>,>=,<,<=,like,in,not in,child_of,parent_left,parent_right|}', limit=${3:100}, name_get_uid=${4:None}):",
+            "\t$5"
+        ],
+        "description": "override private implementation of name search method."
+    },
+    "override name search method": {
+        "prefix": "odnamesearch",
+        "body": [
+            "@api.model",
+            "def name_search(self,name, args=${1:None}, operator='${2|ilike,=,!=,>,>=,<,<=,ilike,in,not in,child_of,parent_left,parent_right|}', limit=${3:100})",
+            "\t$4"
+        ],
+        "description": "override name search method."
+    },
+    "override unlink method": {
+        "prefix": "odunlink",
+        "body": [
+            "@api.multi",
+            "def unlink(self):",
+            "\t$1"
+        ],
+        "description": "override unlink method."
     }
 }

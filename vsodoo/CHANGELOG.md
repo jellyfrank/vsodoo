@@ -7,3 +7,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.4]
 
 - Add Basic Infos.
+
+## [0.0.5]
+
+- Add private name search method.
+- Add depends decorator.
+- Add name search method.
+- Add unlink method.

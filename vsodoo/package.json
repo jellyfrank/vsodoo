@@ -5,7 +5,7 @@
 	"description": "vscode extension for odoo development.",
 	"icon": "vsodoo.png",
 	"repository": {"type": "git","url": "https://github.com/block-cat/vsodoo"},
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"engines": {
 		"vscode": "^1.32.0"
 	},
