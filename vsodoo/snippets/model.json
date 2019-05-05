@@ -165,5 +165,19 @@
             "\t$1"
         ],
         "description": "override unlink method."
+    },
+    "Add Datetime Type Field": {
+        "prefix": "odfd",
+        "body": [
+            "$1 = fields.Datetime('$2',help='$3')"
+        ],
+        "description": "Add Datetime Type Field."
+    },
+    "Add Float Type Field": {
+        "prefix": "odff",
+        "body": [
+            "$1 = fields.Float('$2',help='$3')"
+        ],
+        "description": "Add Float Type Field."
     }
 }

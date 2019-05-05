@@ -162,7 +162,7 @@
         "prefix": "odxgroup",
         "body": [
             "<group>",
-            "{$1}",
+            "\t$1",
             "</group>"
         ],
         "description":"create group node in odoo xml file."
