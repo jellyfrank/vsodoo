@@ -179,5 +179,12 @@
             "$1 = fields.Float('$2',help='$3')"
         ],
         "description": "Add Float Type Field."
+    },
+    "Add One2many Field": {
+        "prefix": "odfo2m",
+        "body":[
+            "$1 = fields.One2many('$2','$3',string='$4')"
+        ],
+        "description": "Add One2many Field."
     }
 }
