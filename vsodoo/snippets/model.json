@@ -46,7 +46,7 @@
     "odoo model integer type": {
         "prefix": "odfint",
         "body": [
-            "$1 = fields.Integer('$2',string='$3', readonly=${4|True,False|})"
+            "$1 = fields.Integer('$2')"
         ],
         "description": "create Integer type field."
     },

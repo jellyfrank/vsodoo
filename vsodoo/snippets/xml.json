@@ -165,11 +165,11 @@
             "\t$1",
             "</group>"
         ],
-        "description":"create group node in odoo xml file."
+        "description": "create group node in odoo xml file."
     },
     "create group with string": {
         "prefix": "odxgroups",
-        "body":[
+        "body": [
             "<group string='$1'>",
             "{$2}",
             "</group>"
@@ -178,7 +178,7 @@
     },
     "create odoo tree list": {
         "prefix": "odxtree",
-        "body":[
+        "body": [
             "<record id=\"$1\" model=\"ir.ui.view\">",
             "\t<field name=\"name\">$2</field>",
             "\t<field name=\"model\">$3</field>",
@@ -189,6 +189,38 @@
             "\t\t</tree>",
             "\t</field>",
             "</record>"
+        ]
+    },
+    "create odoo search view": {
+        "prefix": "odxsearch",
+        "body": [
+            "<search string='$1'>",
+            "\t$2",
+            "</search>"
+        ],
+        "description": "odoo xml search view node."
+    },
+    "create odoo search filter": {
+        "prefix": "odxfilter",
+        "body": [
+            "<filter name='$1' string='$2' domain='$3' />"
+        ],
+        "description": "odoo xml filter"
+    },
+    "create odoo xml separator": {
+        "prefix": "odxseparator",
+        "body": [
+            "<separator/>",
+            "$1"
+        ],
+        "description": "odoo xml separator node"
+    },
+    "create odoo search group by": {
+        "prefix": "odxgroupby",
+        "body": [
+            "<group expand='0' string='$1'>",
+            "\t$1",
+            "</group>"
         ]
     }
 }
