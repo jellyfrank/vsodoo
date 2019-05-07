@@ -22,8 +22,20 @@
 			{
 				"command": "extension.odoo",
 				"title": "Odoo Test"
+			},
+			{
+				"command": "workbench.action.files.newFile",
+				"title": "create file"
 			}
 		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.odoo",
+					"group": "navigation"
+				}
+			]
+		},
 		"snippets": [
 			{
 				"language": "python",
