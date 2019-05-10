@@ -186,5 +186,12 @@
             "$1 = fields.One2many('$2','$3',string='$4')"
         ],
         "description": "Add One2many Field."
+    },
+    "Add Text Field":{
+        "prefix": "odftext",
+        "body":[
+            "$1 = fields.Text('$2',help='$3')"
+        ],
+        "description":"Add Text Field."
     }
 }
