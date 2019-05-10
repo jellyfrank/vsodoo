@@ -48,6 +48,10 @@ Below is a list of all available snippets.
 | `odepends` | Add depends decorator       |
 | `odnamesearch`| Override name search method        |
 | `odunlink` | Override unlink method      |
+| `odfd`     | Add Datetime Field Type     |
+| `odff`     | Add Float    Field Type     |
+| `odfo2m`   | Add One2many Field Type     |
+| `odftext`  | Add Text     Field Type     |
 
 
 ## Xml Snippets
@@ -72,4 +76,13 @@ Below is a list of all available snippets.
 | `odxgroup`   | Add clean Group tag                      |
 | `odxgroups`  | Add Group tag with string attribute      |
 | `odxtree`    | Create Tree View                         |
+| `odxsearch`  | Create Search View                       |
+| `odxfilter`  | Create Search Filter View                |
+| `odxseparator`| Create Separator node                   |
+| `odxgroupby` | Create Search View group by              |
+| `odxgroupby` | Create Search View group by              |
+| `odxugroup` | Add odoo user groups                      |
+| `odxuser`    | Add odoo user                            |
+| `odxapplication`| Add odoo application                  |
+| `odxchatter` | Add chatter nodes in form view           |
 

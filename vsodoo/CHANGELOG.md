@@ -14,3 +14,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Add depends decorator.
 - Add name search method.
 - Add unlink method.
+
+## [0.0.7]
+
+- Add Datetime，Float, One2many,Text fields
+- Add Search, group by,user, user groups,application,chatter in xml view.
