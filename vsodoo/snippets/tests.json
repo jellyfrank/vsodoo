@@ -1,0 +1,18 @@
+{
+    "import odoo tests common": {
+        "prefix": "odtests",
+        "body": [
+            "from odoo.tests import common"
+        ],
+        "description": "import odoo tests common"
+    },
+    "Transaction Case": {
+        "prefix": "odttrans",
+        "body": [
+            "class $1(common.TransactionCase):",
+            "\tdef test_$2(self):",
+            "\t\t$3"
+        ],
+        "description": "Odoo Test Transaction Case"
+    }
+}

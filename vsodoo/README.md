@@ -52,6 +52,8 @@ Below is a list of all available snippets.
 | `odff`     | Add Float    Field Type     |
 | `odfo2m`   | Add One2many Field Type     |
 | `odftext`  | Add Text     Field Type     |
+| `odtests`  | Import Odoo Unit Tests      |
+| `odttrans` | Generate Odoo Transaction Test Case |
 
 
 ## Xml Snippets
