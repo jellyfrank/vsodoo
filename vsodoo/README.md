@@ -87,4 +87,5 @@ Below is a list of all available snippets.
 | `odxuser`    | Add odoo user                            |
 | `odxapplication`| Add odoo application                  |
 | `odxchatter` | Add chatter nodes in form view           |
+| `odxsequence` | Add sequence in data xml file            |
 

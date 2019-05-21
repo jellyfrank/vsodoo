@@ -261,5 +261,19 @@
             "\t<field name=\"message_ids\" widget=\"mail_thread\"/>",
             "</div>"
         ]
+    },
+    "Add Sequence": {
+        "prefix": "odxsequence",
+        "body":[
+            "<record model=\"ir.sequence\" id=\"$1\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"code\">$3</field>",
+            "\t<field name=\"implementation\">${4|standard,no_gap|}</field>",
+            "\t<field name=\"prefix\">$5</field>",
+            "\t<field name=\"padding\">$6</field>",
+            "\t<field name=\"suffix\">$7</field>",
+            "\t<field name=\"number_increment\">${8:1}</field>",
+            "</record>"
+        ]
     }
 }
