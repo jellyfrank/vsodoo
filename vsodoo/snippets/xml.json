@@ -275,5 +275,16 @@
             "\t<field name=\"number_increment\">${8:1}</field>",
             "</record>"
         ]
+    },
+    "Add QWeb Impoter":{
+        "prefix":"odxassets",
+        "body":[
+            "<template id=\"assets_backend_$1\" inherit_id=\"web.assets_backend\" name=\"$2\">",
+            "\t<xpath expr=\"script[last()]\" position=\"after\">",
+            "\t\t<script type=\"text/javascript\" src=\"/$3/static/src/js/$4.js\"></script>",
+            "\t</xpath>",
+            "</template>"
+        ],
+        "description":"Add QWeb static files reference in templates xml file."
     }
 }

@@ -1,0 +1,12 @@
+{
+    "odoo define":{
+        "prefix":"oddefine",
+        "body":[
+            "odoo.define(\"$1\", function (require) {",
+            "\t'use strict';",
+            "\t$2",
+            "});"
+        ],
+        "description": "Add odoo define scaffold in js file."
+    }
+}
