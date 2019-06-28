@@ -88,4 +88,8 @@ Below is a list of all available snippets.
 | `odxapplication`| Add odoo application                  |
 | `odxchatter` | Add chatter nodes in form view           |
 | `odxsequence` | Add sequence in data xml file            |
+| `odxassets` | Add QWeb static files reference in templates xml file.           |
+| `odxcron` | Add Schedual Job           |
+
+
 

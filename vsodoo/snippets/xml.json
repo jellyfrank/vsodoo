@@ -223,38 +223,38 @@
             "</group>"
         ]
     },
-    "add odoo group":{
-        "prefix":"odxugroup",
-        "body":[
+    "add odoo group": {
+        "prefix": "odxugroup",
+        "body": [
             "<record id=\"$1\" model=\"res.groups\">",
             "\t<field name=\"name\">$2</field>",
             "\t<field name=\"category_id\" ref=\"$3\"/>",
             "\t<field name=\"comment\">$4</field>",
             "</record>"
         ],
-        "description":"create odoo user groups"
+        "description": "create odoo user groups"
     },
-    "add odoo user to group":{
-        "prefix":"odxuser",
-        "body":[
+    "add odoo user to group": {
+        "prefix": "odxuser",
+        "body": [
             "<record model=\"res.users\" id=\"$1\">",
             "\t<field eval=\"[$2:(4,ref('$3'))]\" name=\"groups_id\"/>",
             "</record>"
         ]
     },
-    "add odoo application category":{
-        "prefix":"odxappliation",
-        "body":[
+    "add odoo application category": {
+        "prefix": "odxappliation",
+        "body": [
             "<record model=\"ir.module.category\" id=\"$1\">",
             "\t<field name=\"name\">$2</field>",
             "\t<field name=\"sequence\">$23</field>",
             "</record>"
         ],
-        "description":"create odoo application category."
+        "description": "create odoo application category."
     },
     "Add Chatter": {
         "prefix": "odxchatter",
-        "body":[
+        "body": [
             "<div class=\"oe_chatter\">",
             "\t<field name=\"message_follower_ids\" widget=\"mail_followers\"/>",
             "\t<field name=\"activity_ids\" widget=\"mail_activity\"/>",
@@ -264,7 +264,7 @@
     },
     "Add Sequence": {
         "prefix": "odxsequence",
-        "body":[
+        "body": [
             "<record model=\"ir.sequence\" id=\"$1\">",
             "\t<field name=\"name\">$2</field>",
             "\t<field name=\"code\">$3</field>",
@@ -276,15 +276,33 @@
             "</record>"
         ]
     },
-    "Add QWeb Impoter":{
-        "prefix":"odxassets",
-        "body":[
+    "Add QWeb Impoter": {
+        "prefix": "odxassets",
+        "body": [
             "<template id=\"assets_backend_$1\" inherit_id=\"web.assets_backend\" name=\"$2\">",
             "\t<xpath expr=\"script[last()]\" position=\"after\">",
             "\t\t<script type=\"text/javascript\" src=\"/$3/static/src/js/$4.js\"></script>",
             "\t</xpath>",
             "</template>"
         ],
-        "description":"Add QWeb static files reference in templates xml file."
+        "description": "Add QWeb static files reference in templates xml file."
+    },
+    "Add Schedual Job": {
+        "prefix": "odxcron",
+        "body": [
+            "<record model=\"ir.cron\" id=\"$1\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model_id\" ref=\"$3\"/>",
+            "\t<field name=\"state\">${4|code,object_create,object_write,multi,email,followers,next_activity|}</field>",
+            "\t<field name=\"user_id\" ref=\"base.user_root\"/>",
+            "\t<field name=\"interval_number\">${5:1}</field>",
+            "\t<field name=\"interval_type\">${6|minutes,hours,days,weeks,months|}</field>",
+            "\t<field name=\"numbercall\">${7:-1}</field>",
+            "\t<field name=\"priority\">$8</field>",
+            "\t<field name=\"doall\">True</field>",
+            "\t<field name=\"code\">$9</field>",
+            "</record>"
+        ],
+        "description": "Create Corn Job for Odoo."
     }
 }

@@ -19,3 +19,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Add Datetime，Float, One2many,Text fields
 - Add Search, group by,user, user groups,application,chatter in xml view.
+
+## [0.0.9]
+
+- Add Cron job template in xml view
