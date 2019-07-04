@@ -23,3 +23,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.9]
 
 - Add Cron job template in xml view
+
+## [0.1.0]
+
+- Add Server Action
+- Add QWeb Templates
