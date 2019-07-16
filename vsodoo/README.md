@@ -90,6 +90,11 @@ Below is a list of all available snippets.
 | `odxsequence` | Add sequence in data xml file            |
 | `odxassets` | Add QWeb static files reference in templates xml file.           |
 | `odxcron` | Add Schedual Job           |
+| `odxqweb` | Add Qweb Templates           |
+| `odxserveraction` | Add Odoo Server Action           |
+| `odxqwebinherit` | Inherit qweb template by id          |
+
+
 
 
 

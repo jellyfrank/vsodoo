@@ -327,5 +327,16 @@
             "</record>"
         ],
         "description":"Add Odoo Server Action"
+    },
+    "Qweb Inherit Template":{
+        "prefix":"odxqwebinherit",
+        "body":[
+            "<template id=\"$1\" inherit_id=\"$2\">",
+            "\t<xpath expr=\"//$3\" position=\"${4|before,after,replace,attribute|}\">",
+            "\t\t$3",
+            "\t</xpath>",
+            "</template>"
+        ],
+        "description":"Inherit qweb template by id"
     }
 }
