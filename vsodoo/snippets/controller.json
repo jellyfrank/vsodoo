@@ -1,0 +1,13 @@
+{
+    "inherit portal controller": {
+        "prefix": "odctrlportal",
+        "body": [
+            "from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager, get_records_pager",
+            "\r",
+            "\r",
+            "class $1(CustomerPortal):",
+            "\t"
+        ],
+        "description": "inherit portal controller"
+    }
+}
