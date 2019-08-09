@@ -276,7 +276,7 @@
             "</record>"
         ]
     },
-    "Add QWeb Impoter": {
+    "Add QWeb Assests Backend": {
         "prefix": "odxassets",
         "body": [
             "<template id=\"assets_backend_$1\" inherit_id=\"web.assets_backend\" name=\"$2\">",
@@ -286,6 +286,17 @@
             "</template>"
         ],
         "description": "Add QWeb static files reference in templates xml file."
+    },
+    "Add QWeb Assests Website Sale":{
+        "prefix": "odxassetsfront",
+        "body":[
+            "<template id=\"assets_frontend_$1\" inherit_id=\"website_sale.assets_frontend\" name=\"$2\">",
+            "\t<xpath expr=\".\" position=\"inside\">",
+            "\t\t$3",
+            "\t</xpath>",
+            "</template>"
+        ],
+        "description":"Add QWeb Assests Website Sale"
     },
     "Add Schedual Job": {
         "prefix": "odxcron",
@@ -338,5 +349,14 @@
             "</template>"
         ],
         "description":"Inherit qweb template by id"
+    },
+    "Add Application Cateory":{
+        "prefix":"odxappcategory",
+        "body":[
+            "<record id=\"$1\" model=\"ir.module.category\">",
+            "\t<field name=\"name\">$2</field>",
+            "</record>"
+        ],
+        "description":"Add Application Category"
     }
 }
