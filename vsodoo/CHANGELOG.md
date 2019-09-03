@@ -28,3 +28,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Add Server Action
 - Add QWeb Templates
+
+## [0.1.5]
+
+- Add Ir Rule
