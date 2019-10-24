@@ -370,5 +370,25 @@
             "</record>"
         ],
         "description": "Add Ir Rule"
+    },
+    "Add System Parameter":{
+        "prefix":"odxparam",
+        "body":[
+            "<record model=\"ir.config_parameter\" id=\"$1\">",
+            "\t<field name=\"key\">$2</field>",
+            "\t<field name=\"value\">$3</field>",
+            "</record>"
+        ],
+        "description":"Add System Parameter"
+    },
+    "Add Qweb Templates":{
+        "prefix":"odxtemplates",
+        "body":[
+            "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+            "<templates id=\"template\" xml:space=\"preserve\">",
+            "\t$1",
+            "</templates>"
+        ],
+        "description":"Add QWeb Templates"
     }
 }

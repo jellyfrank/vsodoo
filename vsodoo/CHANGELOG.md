@@ -32,3 +32,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.1.5]
 
 - Add Ir Rule
+
+## [0.1.6]
+
+- Add System Parameter
+- Add QWeb Templates

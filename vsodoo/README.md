@@ -94,6 +94,8 @@ Below is a list of all available snippets.
 | `odxserveraction` | Add Odoo Server Action           |
 | `odxqwebinherit` | Inherit qweb template by id          |
 | `odxrule` | Add Ir Rule Domain Filter          |
+| `odxparam` | Add System Parameter          |
+| `odxtemplates` | Add QWeb Templates          |
 
 
 
