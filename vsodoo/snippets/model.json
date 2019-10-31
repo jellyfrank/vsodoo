@@ -182,16 +182,27 @@
     },
     "Add One2many Field": {
         "prefix": "odfo2m",
-        "body":[
+        "body": [
             "$1 = fields.One2many('$2','$3',string='$4')"
         ],
         "description": "Add One2many Field."
     },
-    "Add Text Field":{
+    "Add Text Field": {
         "prefix": "odftext",
-        "body":[
+        "body": [
             "$1 = fields.Text('$2',help='$3')"
         ],
-        "description":"Add Text Field."
+        "description": "Add Text Field."
+    },
+    "Return Action URL": {
+        "prefix": "odact_url",
+        "body": [
+            "return {",
+            "\t\"type\": \"ir.actions.act_url\"",
+            "\t\"url\": $1",
+            "\t\"target\": \"new\"",
+            "}"
+        ],
+        "description": "Return An Action URL in New Window"
     }
 }

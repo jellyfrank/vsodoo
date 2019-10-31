@@ -54,6 +54,7 @@ Below is a list of all available snippets.
 | `odftext`  | Add Text     Field Type     |
 | `odtests`  | Import Odoo Unit Tests      |
 | `odttrans` | Generate Odoo Transaction Test Case |
+| `odact_url` | Return An Action URL in New Window |
 
 
 ## Xml Snippets
@@ -96,6 +97,7 @@ Below is a list of all available snippets.
 | `odxrule` | Add Ir Rule Domain Filter          |
 | `odxparam` | Add System Parameter          |
 | `odxtemplates` | Add QWeb Templates          |
+| `odxrecord` | Add Xml Record Data          |
 
 
 

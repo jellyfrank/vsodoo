@@ -53,11 +53,16 @@
         "prefix": "odxform",
         "body": [
             "<form string=\"$1\" class=\"$2\">",
-            "\t<header>",
-            "\t\t$3",
-            "\t</header>",
             "\t<sheet>",
-            "\t\t$4",
+            "\t\t<div class=\"oe_title\">",
+            "\t\t\t<label for=\"name\" string=\"$3\" class=\"oe_edit_only\"/>",
+            "\t\t\t<h1>",
+            "\t\t\t\t<field name=\"name\" readonly=\"1\"/>",
+            "\t\t\t</h1>",
+            "\t\t</div>",
+            "\t\t<group>",
+            "\t\t\t<field name=\"$4\"/>",
+            "\t\t</group>",
             "\t</sheet>",
             "</form>"
         ],
@@ -371,24 +376,32 @@
         ],
         "description": "Add Ir Rule"
     },
-    "Add System Parameter":{
-        "prefix":"odxparam",
-        "body":[
+    "Add System Parameter": {
+        "prefix": "odxparam",
+        "body": [
             "<record model=\"ir.config_parameter\" id=\"$1\">",
             "\t<field name=\"key\">$2</field>",
             "\t<field name=\"value\">$3</field>",
             "</record>"
         ],
-        "description":"Add System Parameter"
+        "description": "Add System Parameter"
     },
-    "Add Qweb Templates":{
-        "prefix":"odxtemplates",
-        "body":[
+    "Add Qweb Templates": {
+        "prefix": "odxtemplates",
+        "body": [
             "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
             "<templates id=\"template\" xml:space=\"preserve\">",
             "\t$1",
             "</templates>"
         ],
-        "description":"Add QWeb Templates"
+        "description": "Add QWeb Templates"
+    },
+    "Add Preset Data": {
+        "prefix": "odxrecord",
+        "body": [
+            "<record model=\"$1\" id=\"$2\">",
+            "\t<field name=\"$3\">$4</field>",
+            "</record>"
+        ]
     }
 }

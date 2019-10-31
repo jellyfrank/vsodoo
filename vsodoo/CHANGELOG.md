@@ -37,3 +37,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Add System Parameter
 - Add QWeb Templates
+- Update Form View Layout
+- Add Xml View Record
+- Return Action URL
