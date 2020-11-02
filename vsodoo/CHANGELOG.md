@@ -40,3 +40,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Update Form View Layout
 - Add Xml View Record
 - Return Action URL
+
+## [0.1.7]
+
+- Add Wizard with/out Fields
+- Add Setting Panel
+- Add Preset Data

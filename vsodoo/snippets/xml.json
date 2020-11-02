@@ -403,5 +403,76 @@
             "\t<field name=\"$3\">$4</field>",
             "</record>"
         ]
+    },
+    "Add Setting Panel": {
+        "prefix": "odxsetting",
+        "body":[
+            "<record id=\"$1_res_config_settings\" model=\"ir.ui.view\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model\">res.config.settings</field>",
+            "\t<field name=\"inherit_id\" ref=\"base.res_config_settings_view_form\"/>",
+            "\t<field name=\"arch\" type=\"xml\">",
+            "\t\t<xpath expr=\"//div[hasclass('settings')]\" position=\"inside\">",
+            "\t\t\t<div class=\"app_settings_block\" data-string=\"$3\" string=\"$4\" data-key=\"$5\">",
+            "\t\t\t\t<h2>$6</h2>",
+            "\t\t\t\t<div class=\"row mt16 o_settings_container\">",
+            "\t\t\t\t\t<div class=\"col-12 col-lg-6 o_setting_box\" title=\"$7\">",
+            "\t\t\t\t\t\t<div class=\"o_setting_left_pane\"/>",
+            "\t\t\t\t\t\t<div class=\"o_setting_right_pane\">",
+            "\t\t\t\t\t\t\t<b></b>",
+            "\t\t\t\t\t\t\t<div class=\"text-muted\">",
+            "\t\t\t\t\t\t\t</div>",
+            "\t\t\t\t\t\t\t<div class=\"mt16\">",
+            "\t\t\t\t\t\t\t\t<field name=\"$8\"/>",
+            "\t\t\t\t\t\t\t</div>",
+            "\t\t\t\t\t\t</div>",
+            "\t\t\t\t\t</div>",                         
+            "\t\t\t\t</div>",
+            "\t\t\t</div>",
+            "\t\t</xpath>",
+            "\t</field>",
+            "</record>"
+        ]
+    },
+    "Add Wizard With Fields": {
+        "prefix": "odxwizardfield",
+        "body":[
+            "<record id=\"$1\" model=\"ir.ui.view\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model\">$3</field>",
+            "\t<field name=\"arch\" type=\"xml\">",
+            "\t\t<form string=\"$4\">",
+            "\t\t\t<h1>$5</h1>",
+            "\t\t\t<div>",
+            "\t\t\t\t<field name=\"$6\"/>",
+            "\t\t\t</div>",
+            "\t\t\t<footer>",
+            "\t\t\t\t<button name=\"$8\" string=\"$9\" class=\"oe_highlight\" type=\"object\" />",
+            "\t\t\t\tor",
+            "\t\t\t\t<button special=\"cancel\" string=\"Cancel\" class=\"oe_link\" />",
+            "\t\t\t</footer>",
+            "\t\t</form>",
+            "\t</field>",
+            "</record>"
+        ]
+    },
+    "Add Wizard Without Fields": {
+        "prefix": "odxwizardfield",
+        "body":[
+            "<record id=\"$1\" model=\"ir.ui.view\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model\">$3</field>",
+            "\t<field name=\"arch\" type=\"xml\">",
+            "\t\t<form string=\"$4\">",
+            "\t\t\t<h1>$5</h1>",
+            "\t\t\t<footer>",
+            "\t\t\t\t<button name=\"$6\" string=\"$7\" class=\"oe_highlight\" type=\"object\" />",
+            "\t\t\t\tor",
+            "\t\t\t\t<button special=\"cancel\" string=\"Cancel\" class=\"oe_link\" />",
+            "\t\t\t</footer>",
+            "\t\t</form>",
+            "\t</field>",
+            "</record>"
+        ]
     }
 }
