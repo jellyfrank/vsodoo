@@ -46,3 +46,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Add Wizard with/out Fields
 - Add Setting Panel
 - Add Preset Data
+
+## [0.1.8]
+
+- Add Simple Many2one Field definition.
+- Add TransientModel definition.
+- Add Footer section to page node.
+- Fix wizard form with fields adding group before fields.

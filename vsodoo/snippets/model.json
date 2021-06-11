@@ -12,6 +12,15 @@
         ],
         "description": "create a new odoo model."
     },
+    "create transient model":{
+        "prefix": "odclst",
+        "body":[
+            "class $1(models.TransientModel):",
+            "\t_name=\"$2\"\t",
+            "\t_description = \"$3\""
+        ],
+        "description": "create a new TransientModel Class."
+    },
     "create model without import": {
         "prefix": "odmds",
         "body": [
@@ -36,12 +45,40 @@
         ],
         "description": "create Boolean type field."
     },
+    "odoo model many2one simple":{
+        "prefix": "odfm2",
+        "body":[
+            "$1 = fields.Many2one('$2', string='$3')"
+        ],
+        "description":"create Many2one field with simple args."
+    },
     "odoo model many2one type": {
         "prefix": "odfm2o",
         "body": [
             "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False|},help='$6')"
         ],
         "description": "create Many2one type field."
+    },
+    "odoo model Many2many field":{
+        "prefix": "odfm2m",
+        "body": [
+            "$1 = fields.Many2many('$2',string='$3')"
+        ],
+        "description": "Add Many2many type field."
+    },
+    "odoo model Monetary field":{
+        "prefix": "odfmoney",
+        "body":[
+            "$1 = fields.Monetary('$2'')"
+        ],
+        "description": "create Monetary fields."
+    },
+    "odoo model currency_id":{
+        "prefix": "odfcurrency",
+        "body":[
+            "currency_id = fields.Many2one('res.currency',string='currency')"
+        ],
+        "description": "Add currency id to model."
     },
     "odoo model integer type": {
         "prefix": "odfint",

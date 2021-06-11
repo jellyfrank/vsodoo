@@ -444,7 +444,9 @@
             "\t\t<form string=\"$4\">",
             "\t\t\t<h1>$5</h1>",
             "\t\t\t<div>",
-            "\t\t\t\t<field name=\"$6\"/>",
+            "\t\t\t\t<group>",
+            "\t\t\t\t\t<field name=\"$6\"/>",
+            "\t\t\t\t</group>",
             "\t\t\t</div>",
             "\t\t\t<footer>",
             "\t\t\t\t<button name=\"$8\" string=\"$9\" class=\"oe_highlight\" type=\"object\" />",
@@ -474,5 +476,17 @@
             "\t</field>",
             "</record>"
         ]
+    },
+    "Add footer to form view": {
+        "prefix": "odxfooter",
+        "body":[
+            "<group class=\"oe_subtotal_footer oe_right\" colspan=\"2\" name=\"$1\">",
+            "\t<field name=\"$2\" widget=\"monetary\" options=\"{'currency_field': 'currency_id'}\"/>",
+            "\t<div class=\"oe_subtotal_footer_separator oe_inline o_td_label\">",
+            "\t\t<label for=\"amount_total\"/>",
+            "\t</div>",
+            "</group>"
+        ],
+        "description": "add footer section to page node."
     }
 }
