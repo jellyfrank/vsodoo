@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// vscode.commands.executeCommand("fileExplorer.copy",[".","."]);
 		// vscode.commands.executeCommand("explorer.newFile","test.file");
 
-		vscode.window.showInformationMessage("123");
+		// vscode.window.showInformationMessage("123");
 
 
 	});
@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	//add icons
 	let odoobutton = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 5);
-	odoobutton.text = `$(plug)`;
+	odoobutton.text = `$(mark-github)`;
 	odoobutton.tooltip = "odoo extension ready.";
 	odoobutton.show();
 

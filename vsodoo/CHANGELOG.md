@@ -53,3 +53,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Add TransientModel definition.
 - Add Footer section to page node.
 - Fix wizard form with fields adding group before fields.
+- Add mail thread and mail activity mixin inherits.

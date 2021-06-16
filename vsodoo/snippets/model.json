@@ -21,6 +21,13 @@
         ],
         "description": "create a new TransientModel Class."
     },
+    "inheirt mail thread & mail activitiy":{
+        "prefix":"odmail",
+        "body":[
+            "_inherit =  ['mail.thread','mail.activity.mixin']"
+        ],
+        "descripition": "inherit mail thread and mail activity."
+    },
     "create model without import": {
         "prefix": "odmds",
         "body": [
@@ -34,14 +41,14 @@
     "odoo model char field.": {
         "prefix": "odfc",
         "body": [
-            "$1 = fields.Char('$2',help='$3')"
+            "$1 = fields.Char('$2')"
         ],
         "descritption": "create Char type field."
     },
     " odoo model boolean type": {
         "prefix": "odfb",
         "body": [
-            "$1 = fields.Boolean('$2',help='$3')"
+            "$1 = fields.Boolean('$2')"
         ],
         "description": "create Boolean type field."
     },
@@ -55,7 +62,7 @@
     "odoo model many2one type": {
         "prefix": "odfm2o",
         "body": [
-            "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False|},help='$6')"
+            "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False|})"
         ],
         "description": "create Many2one type field."
     },
@@ -90,7 +97,7 @@
     "odoo model selection type": {
         "prefix": "odfselect",
         "body": [
-            "$1 = fields.Selection(selection='$2',string='$3',default='$4',help='$5')"
+            "$1 = fields.Selection(selection='$2',string='$3',default='$4')"
         ],
         "description": "create Selection type field."
     },
