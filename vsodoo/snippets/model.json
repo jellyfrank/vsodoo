@@ -12,8 +12,14 @@
         ],
         "description": "create a new odoo model."
     },
+    "import odoo":{
+        "prefix":"odim",
+        "body":[
+            "from odoo import api, fields, models, _"
+        ]
+    },
     "create transient model":{
-        "prefix": "odclst",
+        "prefix": "odtm",
         "body":[
             "class $1(models.TransientModel):",
             "\t_name=\"$2\"\t",
@@ -64,7 +70,7 @@
         "body": [
             "$1 = fields.Many2one('$2', string='$3', ondelete='${4|restrict,no action,cascade,set null,set default|}', required=${5|True,False|})"
         ],
-        "description": "create Many2one type field."
+        "description": "Create Many2one type field."
     },
     "odoo model Many2many field":{
         "prefix": "odfm2m",

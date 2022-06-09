@@ -11,14 +11,7 @@
     "create menu": {
         "prefix": "odxmenu",
         "body": [
-            "<menuitem id=\"$1\"",
-            "name=\"$2\"",
-            "parent=\"$3\"",
-            "groups=\"$4\"",
-            "action=\"$5\"",
-            "web_icon=\"$6,$7\"",
-            "active=\"$8\"",
-            "sequence=\"$9\"/>"
+            "<menuitem id=\"$1\"  name=\"$2\"  parent=\"$3\" groups=\"$4\" action=\"$5\"  web_icon=\"$6,$7\"  active=\"$8\"  sequence=\"$9\"/>"
         ]
     },
     "create form view": {
@@ -42,10 +35,12 @@
             "</xpath>"
         ]
     },
-    "create xpath attribute": {
+    "create xpath attributes": {
         "prefix": "odxattr",
         "body": [
-            "<attribute name=\"$1\">$2</attribute>"
+            "<xpath expr=\"$1\" position=\"${2|after|before|replace|attributes}\">",
+            "\t<attribute name=\"$3\">$4</attribute>",
+            "</xpath>"
         ],
         "description": "create odoo xml attributes"
     },
@@ -71,10 +66,7 @@
     "create odoo form button": {
         "prefix": "odxbutton",
         "body": [
-            "<button name=\"$1\" type=\"object\"",
-            "string=\"$2\" class=\"oe_highlight\"",
-            "states=\"$3\"",
-            "attrs=\"$4\"/>\""
+            "<button name=\"$1\" type=\"object\" \"string=\"$2\" class=\"oe_highlight\"  \"states=\"$3\" \"attrs=\"$4\"/>\""
         ],
         "description": "create odoo form button."
     },
@@ -144,14 +136,26 @@
         "description": "create odoo page node."
     },
     "create odoo action": {
-        "prefix": "odxaction",
+        "prefix": "odxact",
         "body": [
             "<record id=\"$1\" model=\"ir.actions.act_window\">",
             "\t<field name=\"name\">$2</field>",
             "\t<field name=\"type\">ir.actions.act_window</field>",
             "\t<field name=\"res_model\">$3</field>",
             "\t<field name=\"view_mode\">$4</field>",
-            "\t<field name=\"view_type\">form</field>",
+            "\t<field name=\"target\">${5|inline,new|}</field>",
+            "</record>"
+        ],
+        "description": "create odoo xml action."
+    },
+    "create odoo action full": {
+        "prefix": "odxactall",
+        "body": [
+            "<record id=\"$1\" model=\"ir.actions.act_window\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"type\">ir.actions.act_window</field>",
+            "\t<field name=\"res_model\">$3</field>",
+            "\t<field name=\"view_mode\">$4</field>",
             "\t<field name=\"view_id\" ref=\"$5\"/>",
             "\t<field name=\"search_view_id\" ref=\"$6\"/>",
             "\t<field name=\"context\">",
@@ -159,9 +163,10 @@
             "\t</field>",
             "\t<field name=\"help\" type=\"html\">",
             "\t</field>",
+            "\t<field name=\"target\">${8|inline,new|}</field>",
             "</record>"
         ],
-        "description": "create odoo xml action."
+        "description": "create odoo xml action with all fields."
     },
     "create clean group node": {
         "prefix": "odxgroup",
@@ -488,5 +493,35 @@
             "</group>"
         ],
         "description": "add footer section to page node."
+    },
+    "Add Report Script":{
+        "prefix": "odxreport",
+        "body":[
+            "<report id=\"$1",
+            "string=\"$2",
+            "model=\"$3",
+            "report_type=\"qweb-pdf",
+            "name=\"$3",
+            "file=\"$5",
+            "print_report_name=\"'$6 - %s' % (object.name)\"/>"
+        ]
+    },
+    "Add Report Papaer Format":{
+        "prefix":"odxpaper",
+        "body":[
+            "<record model=\"report.paperformat\" id=\"paper_format_$1\">",
+            "<field name=\"name\">$2</field>",
+            "<field name=\"format\">custom</field>",
+            "<field name=\"orientation\">${3|Landscape|Portraitl}</field>",
+            "<field name=\"page_height\">$4</field>",
+            "<field name=\"page_width\">$5</field>",
+            "<field name=\"margin_top\">$6</field>",
+            "<field name=\"margin_bottom\">$7</field>",
+            "<field name=\"margin_left\">$8</field>",
+            "<field name=\"margin_right\">$9</field>",
+            "<field name=\"header_spacing\">$10</field>",
+            "<field name=\"dpi\">90</field>",
+            "</record>"
+        ]
     }
 }
