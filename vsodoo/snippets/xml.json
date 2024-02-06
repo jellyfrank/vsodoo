@@ -4,7 +4,9 @@
         "body": [
             "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
             "<odoo>",
-            "\t$1",
+            "\t<data>"
+            "\t\t$1",
+            "\t</data>"
             "</odoo>"
         ]
     },

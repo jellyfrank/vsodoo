@@ -5,7 +5,7 @@
 	"description": "vscode extension for odoo development.",
 	"icon": "vsodoo.png",
 	"repository": {"type": "git","url": "https://github.com/block-cat/vsodoo"},
-	"version": "0.2.0",
+	"version": "0.2.2",
 	"engines": {
 		"vscode": "^1.32.0"
 	},
@@ -18,16 +18,7 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.odoo",
-				"title": "Odoo Test"
-			},
-			{
-				"command": "workbench.action.files.newFile",
-				"title": "create file"
-			}
-		],
+		
 		"menus": {
 			"explorer/context": [
 				{

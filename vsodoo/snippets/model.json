@@ -12,6 +12,17 @@
         ],
         "description": "create a new odoo model."
     },
+    "inherit model":{
+        "prefix": "odmin",
+        "body": [
+            "from odoo import api, fields, models, _",
+            "\r",
+            "\r",
+            "class $1(models.Model):",
+            "\t_inherit=\"$2\""
+        ],
+        "descripition": "inherit a odoo model."
+    },
     "import odoo":{
         "prefix":"odim",
         "body":[
