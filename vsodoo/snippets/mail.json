@@ -1,0 +1,16 @@
+{
+    "create mail template defination(xml)": {
+        "prefix": "odxmailtempate",
+        "body": [
+            "<record model=\"mail.template\" id=\"$1\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model_id\" ref=\"model_$3\">",
+            "\t<field name=\"subject\">$4</field>",
+            "\t<field name=\"body_html\" type=\"html\">",
+            "\t\t\t$5",
+            "\t</field>",
+            "</record>"
+        ],
+        "descripition":"Email template defination"
+    }
+}

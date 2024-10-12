@@ -1,0 +1,110 @@
+{
+    "create form view": {
+        "prefix": "odxview",
+        "body": [
+            "<record id=\"$1\" model=\"ir.ui.view\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model\">$3</field>",
+            "\t<field name=\"inherit_id\" ref=\"$4\"/>",
+            "\t<field name=\"arch\" type=\"xml\">",
+            "\t\t$5",
+            "\t</field>",
+            "</record>"
+        ]
+    },
+    "create odoo form node": {
+        "prefix": "odxform",
+        "body": [
+            "<form string=\"$1\" class=\"$2\">",
+            "\t<sheet>",
+            "\t\t<div class=\"oe_title\">",
+            "\t\t\t<label for=\"name\" string=\"$3\" class=\"oe_edit_only\"/>",
+            "\t\t\t<h1>",
+            "\t\t\t\t<field name=\"name\" readonly=\"1\"/>",
+            "\t\t\t</h1>",
+            "\t\t</div>",
+            "\t\t<group>",
+            "\t\t\t<field name=\"$4\"/>",
+            "\t\t</group>",
+            "\t</sheet>",
+            "</form>"
+        ],
+        "description": "create odoo form node."
+    },
+    "create odoo form button": {
+        "prefix": "odxbutton",
+        "body": [
+            "<button name=\"$1\" type=\"object\" \"string=\"$2\" class=\"oe_highlight\"  \"states=\"$3\" \"attrs=\"$4\"/>\""
+        ],
+        "description": "create odoo form button."
+    },
+    "create odoo form statusbar": {
+        "prefix": "odxstatus",
+        "body": [
+            "<field name=\"$1\" widget=\"statusbar\" statusbar_visible=\"$2\"/>"
+        ],
+        "description": "create odoo xml status bar."
+    },
+    "create odoo form button box": {
+        "prefix": "odxbox",
+        "body": [
+            "<div class=\"oe_button_box\" name=\"button_box\">",
+            "\t<button name=\"$1\"",
+            "\t\ttype=\"object\"",
+            "\t\tclass=\"oe_stat_button\"",
+            "\t\ticon=\"fa-pencil-square-o\"",
+            "\t\tattrs=\"$2\">",
+            "\t\t<field name=\"$3\" widget=\"statinfo\" string=\"$4\"/>",
+            "\t</button>",
+            "</div>"
+        ],
+        "description": "create odoo form button box."
+    },
+    "create odoo form title": {
+        "prefix": "odxtitle",
+        "body": [
+            "<div class=\"oe_title\">",
+            "\t<h1>",
+            "\t\t<field name=\"name\" readonly=\"1\"/>",
+            "\t</h1>",
+            "</div>"
+        ],
+        "description": "create odoo form title."
+    },
+    "create odoo notebook": {
+        "prefix": "odxnotebook",
+        "body": [
+            "<notebook>",
+            "\t$1",
+            "</notebook>"
+        ],
+        "description": "create odoo notebook schema"
+    },
+    "create odoo page": {
+        "prefix": "odxpage",
+        "body": [
+            "<page string=\"$1\" name=\"$1\">",
+            "$2",
+            "</page>"
+        ],
+        "description": "create odoo page node."
+    },
+    "create clean group node": {
+        "prefix": "odxgroup",
+        "body": [
+            "<group>",
+            "\t$1",
+            "</group>"
+        ],
+        "description": "create group node in odoo xml file."
+    },
+    "create group with string": {
+        "prefix": "odxgroups",
+        "body": [
+            "<group string='$1'>",
+            "{$2}",
+            "</group>"
+        ],
+        "description": "create group node with string attritbute in odoo xml file."
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "create odoo tree view": {
+        "prefix": "odxtree",
+        "body": [
+            "<record id=\"$1\" model=\"ir.ui.view\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model\">$3</field>",
+            "\t<field name=\"priority\">$4</field>",
+            "\t<field name=\"arch\" type=\"xml\">",
+            "\t\t<tree string=\"$5\">",
+            "\t\t\t$6",
+            "\t\t</tree>",
+            "\t</field>",
+            "</record>"
+        ],
+        "descripition":"Tree view defination(version 17.0-)"
+    },
+    "create odoo list view": {
+        "prefix": "odxlist",
+        "body": [
+            "<record id=\"$1\" model=\"ir.ui.view\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model\">$3</field>",
+            "\t<field name=\"priority\">$4</field>",
+            "\t<field name=\"arch\" type=\"xml\">",
+            "\t\t<list string=\"$5\">",
+            "\t\t\t$6",
+            "\t\t</list>",
+            "\t</field>",
+            "</record>"
+        ],
+        "descripition":"List view defination(version 18.0+)"
+    }
+}

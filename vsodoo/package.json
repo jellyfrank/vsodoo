@@ -1,13 +1,13 @@
 {
 	"name": "vsodoo",
 	"displayName": "vsodoo",
-	"publisher": "Block-Cat",
+	"publisher": "Qingdao Ohm Network Technology",
 	"description": "vscode extension for odoo development.",
 	"icon": "vsodoo.png",
-	"repository": {"type": "git","url": "https://github.com/block-cat/vsodoo"},
-	"version": "0.2.2",
+	"repository": {"type": "git","url": "https://github.com/jellyfrank/vsodoo"},
+	"version": "1.0.0",
 	"engines": {
-		"vscode": "^1.32.0"
+		"vscode": "^1.94.0"
 	},
 	"categories": [
 		"Other"
@@ -18,15 +18,6 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		
-		"menus": {
-			"explorer/context": [
-				{
-					"command": "extension.odoo",
-					"group": "navigation"
-				}
-			]
-		},
 		"snippets": [
 			{
 				"language": "python",
@@ -43,6 +34,14 @@
 			{
 				"language": "xml",
 				"path": "./snippets/xml.json"
+			},
+			{
+				"language": "xml",
+				"path": "./snippets/form_view.json"
+			},
+			{
+				"language": "xml",
+				"path": "./snippets/tree_view.json"
 			},
 			{
 				"language": "python",
@@ -70,6 +69,6 @@
 		"@types/node": "^10.12.21",
 		"tslint": "^5.12.1",
 		"typescript": "^3.4.5",
-		"vscode": "^1.1.28"
+		"vscode": "^1.94.0"
 	}
 }
